@@ -6,6 +6,6 @@ def show
 end
 def index
 sightings = Sighting.all
-render json: sightings, include: [:bird, :location]
+render json: sightings.to_json( include: [:bird, :location])
 end
 end
